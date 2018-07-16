@@ -2,12 +2,14 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const path = require("path");
+const dotenv = require("dotenv");
 
 const ShortenedURL = require("./structs/ShortenedURL.js");
 const makeid = require("./util/makeID.js");
+dotenv.load();
 
 mongoose.connect(
-  "mongodb://Affinix:password123@ds137631.mlab.com:37631/short",
+  process.env.MONGO_URL,
   { useNewUrlParser: true }
 );
 
