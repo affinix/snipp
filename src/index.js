@@ -37,9 +37,7 @@ app.get("/", (req, res) => {
 
 app.get("/*", (req, res) => {
   ShortenedURL.findOne({ id: req.url.slice(1) }).then(url => {
-    if (url) {
-      res.redirect(url.url);
-    }
+    if (url) res.redirect(url.url);
   });
 });
 
