@@ -21,13 +21,15 @@ $ node .
 
 **Query string parameters**
 
-| Name | Data type | Required / Optional | Description         |
-|------|-----------|---------------------|---------------------|
-| url  | string    | required            | URL to be shortened |
+| Name | Data type | Required / Optional | Description                      |
+|------|-----------|---------------------|----------------------------------|
+| url  | string    | required            | URL to be shortened              |
+| id   | string    | optional            | ID which the URL is accessed by  |
 
 **Example:**
 
-`GET https://snipp.it/api/new?url="https://google.com"`
+`GET https://snipp.it/api/new?url=https://google.com`
+`GET https://snipp.it/api/new?url=https://google.com&id="google"`
 
 **Returns:**
 
