@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <title>Snipp</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
     <section class="section">
         <div class="container">
-                <form action="/api/new" method="GET">
-                    <label>URL:</label>
-                    <input type="text" name="url">
-                    <lable>ID:</lable>
-                    <input type="text" name="id">
-                    <input type="submit" value="Submit">
-                </form>
+            <div class="form">
+                    <form action="/api/new" method="GET">
+                        <label>URL:</label>
+                        <input type="text" name="url">
+                        <lable>ID:</lable>
+                        <input type="text" name="id">
+                        <input type="submit" value="Submit">
+                    </form>
+            </div>
         </div>
     </section>
 </body>
