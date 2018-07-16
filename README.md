@@ -14,7 +14,6 @@ $ node .
 ## API Reference
 
 ### NEW:
-------------
 
 | Endpoint | Method | Description         |
 |----------|--------|---------------------|
