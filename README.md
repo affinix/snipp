@@ -1,5 +1,5 @@
 # ✂️ snipp
-Dead simple, bare bones URL shortener, using MongoDB.
+Dead simple, bare bones URL shortener, using MongoDB. (No UI)
 
 ## Installing & Running
 ```
