@@ -1,4 +1,4 @@
-# snipp
+# ✂️ snipp
 Dead simple, bare bones URL shortener, using MongoDB.
 
 ## Installing & Running
