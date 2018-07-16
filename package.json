@@ -1,0 +1,14 @@
+{
+  "name": "shorten",
+  "version": "0.0.1",
+  "main": "src/index.js",
+  "repository": "https://github.com/Affinix/shorten.git",
+  "license": "MIT",
+  "scripts": {
+    "start": "node ."
+  },
+  "dependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.2.3"
+  }
+}
