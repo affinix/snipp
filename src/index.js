@@ -1,6 +1,5 @@
-const express = require("express");
+const app = require("express")();
 const mongoose = require("mongoose");
-const app = express();
 const path = require("path");
 const dotenv = require("dotenv");
 
@@ -14,10 +13,10 @@ mongoose.connect(
 );
 
 app.get("/api/new", (req, res) => {
-  const id = makeid();
+  const id = req.query.id ? req.query.id : makeid();
   ShortenedURL.findOne({ id: id }).then(url => {
     if (url) {
-      res.status(500);
+      return res.status(500).json({ error: "ID taken" });
     } else {
       ShortenedURL.create({ url: req.query.url, id: id })
         .then(() => {
