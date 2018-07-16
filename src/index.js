@@ -10,10 +10,7 @@ dotenv.load();
 
 app.use(express.static("public"));
 
-mongoose.connect(
-  process.env.MONGO_URL,
-  { useNewUrlParser: true }
-);
+mongoose.connect( process.env.MONGO_URL, { useNewUrlParser: true } );
 
 app.get("/api/new", (req, res) => {
   const id = req.query.id ? req.query.id : makeid();
@@ -22,21 +19,13 @@ app.get("/api/new", (req, res) => {
       return res.status(500).json({ error: "ID taken" });
     } else {
       ShortenedURL.create({ url: req.query.url, id: id })
-        .then(() =>
-          res.status(200).json({
-            id: id,
-            url: req.get("host") + `/${id}`,
-            baseURL: req.get("host")
-          })
-        )
+        .then(() => res.status(200).json({ id: id, url: req.get("host") + `/${id}`, baseURL: req.get("host") }) )
         .catch(() => res.status(500));
     }
   });
 });
 
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/../public"));
-});
+app.get("/", (req, res) => res.sendFile(path.join(__dirname, "/../public")));
 
 app.get("/*", (req, res) => {
   ShortenedURL.findOne({ id: req.url.slice(1) }).then(url => {
