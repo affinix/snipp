@@ -5,7 +5,7 @@ Dead simple, bare bones URL shortener using MongoDB. (No UI)
 ```
 $ git clone https://github.com/Affinix/snipp.git
 $ cd snipp
-$ npm install
+$ yarn
 $ node .
 ```
 
